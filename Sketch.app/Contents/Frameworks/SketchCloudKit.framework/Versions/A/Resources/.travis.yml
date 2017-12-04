@@ -1,0 +1,22 @@
+branches:
+only:
+- master
+- develop
+
+before_install:
+- git submodule update --init --recursive
+osx_image: xcode8.3
+language: objective-c
+script:
+- xcodebuild test -project "SketchCloudKit.xcodeproj" -scheme "SketchCloudKit" -sdk macosx -configuration Debug
+
+notifications:
+slack:
+rooms:
+# Awkward Sketch
+- awkward:c6NKNzl7YmKSXxHN2FQBcxiK
+# Awkward Builds
+- awkward:L2ReNdZlvHrPIveui9u741dP
+on_success: change
+on_failure: always
+on_start: never

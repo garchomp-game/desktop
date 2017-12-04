@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/*初期化*/
+* {
+  padding: 0;
+  margin: 0; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+.container {
+  width: 1170px;
+  margin: 0 auto; }
+
+/*ヘッダー*/
+header {
+  height: 120px;
+  background-color: #FF0DFF; }
+  header .link_group {
+    float: right;
+    line-height: 120px; }
+    header .link_group a {
+      display: inline-block;
+      margin: 0 10px; }
+
+/*# sourceMappingURL=base.css.map */
